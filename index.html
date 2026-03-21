@@ -87,6 +87,9 @@ nav{position:sticky;top:0;z-index:1000;background:var(--maroon);box-shadow:0 2px
 .pcard:hover .pimg img{transform:scale(1.05)}
 .pbadge{position:absolute;top:9px;left:9px;background:var(--maroon);color:#fff;padding:3px 9px;font-size:10.5px;font-family:'Cinzel',serif;border-radius:2px;z-index:1}
 .pbadge.new{background:var(--ok)}.pbadge.sale{background:#e74c3c}.pbadge.trending{background:#8e44ad}
+.pbadge.ready-to-ship{background:#25D366}.pbadge.featured{background:#1a6b9a}.pbadge.exclusive{background:#7B241C}
+.pcatalog-meta{font-size:11px;color:var(--mid);margin-top:7px;border-top:1px solid #f0e8d8;padding-top:7px;display:grid;grid-template-columns:1fr 1fr;gap:3px 8px}
+.pcatalog-meta span{font-size:11px;color:#777}.pcatalog-meta span b{color:var(--dark);font-weight:600}
 .pwbtn{position:absolute;top:9px;right:9px;width:30px;height:30px;background:rgba(255,255,255,.92);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#ccc;opacity:0;transition:.2s;z-index:1}
 .pcard:hover .pwbtn{opacity:1}.pwbtn.on{color:var(--crimson);opacity:1}.pwbtn:hover{color:var(--crimson)}
 .pinfo{padding:13px}
@@ -414,6 +417,38 @@ footer{background:#2C1810;color:rgba(253,246,236,.6);padding:44px 32px 26px;bord
   /* Price summary stacks below items on mobile */
   .psummary{position:static}
 }
+/* ── WHATSAPP SYSTEM ── */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:9000;display:flex;align-items:center;gap:9px;background:#25D366;color:#fff;padding:13px 20px;border-radius:50px;font-family:'Cinzel',serif;font-size:12.5px;letter-spacing:.5px;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;text-decoration:none;transition:.3s;white-space:nowrap}
+.wa-float:hover{background:#128C7E;transform:translateY(-3px);box-shadow:0 8px 28px rgba(37,211,102,.45)}
+.wa-float i{font-size:20px}
+.wa-order-btn{display:flex;align-items:center;justify-content:center;gap:6px;margin:0 13px 13px;padding:9px 0;background:#25D366;color:#fff;border:none;border-radius:4px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.5px;cursor:pointer;text-decoration:none;transition:.2s;width:calc(100% - 26px)}
+.wa-order-btn:hover{background:#128C7E}
+.wa-3btns{display:flex;flex-direction:column;gap:9px;margin:14px 0}
+.wa-3btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border:none;border-radius:4px;font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.5px;cursor:pointer;text-decoration:none;transition:.2s;width:100%}
+.wa-3btn.enquire{background:#25D366;color:#fff}
+.wa-3btn.order{background:#128C7E;color:#fff}
+.wa-3btn.video{background:transparent;border:1.5px solid #25D366;color:#25D366}
+.wa-3btn:hover{opacity:.85;transform:translateY(-1px)}
+.wa-modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:10000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:.3s}
+.wa-modal-bg.open{opacity:1;pointer-events:auto}
+.wa-modal{background:#fff;border-radius:10px;max-width:420px;width:90%;padding:28px;text-align:center;position:relative;transform:translateY(20px);transition:.3s}
+.wa-modal-bg.open .wa-modal{transform:translateY(0)}
+.wa-modal-icon{font-size:52px;margin-bottom:10px}
+.wa-modal h3{font-family:'Playfair Display',serif;font-size:18px;color:var(--dark);margin-bottom:8px}
+.wa-modal p{font-size:13.5px;color:var(--mid);margin-bottom:16px}
+.wa-modal ol{text-align:left;font-size:13.5px;color:var(--mid);line-height:2.1;padding-left:20px;margin-bottom:18px}
+.wa-modal ol li strong{color:var(--dark)}
+.wa-modal-close{position:absolute;top:10px;right:14px;font-size:18px;cursor:pointer;color:#aaa;background:none;border:none;line-height:1}
+.wa-modal-close:hover{color:var(--dark)}
+.pay-info{background:linear-gradient(135deg,#f0fff4,#e8f5e9);border:1.5px solid #25D366;border-radius:8px;padding:18px;margin-top:14px}
+.pay-info h4{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1px;color:#128C7E;margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.pay-qr{width:100%;aspect-ratio:1/1;background:#fff;border:1px dashed #25D366;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;font-size:13px;color:#888;margin-bottom:10px;padding:18px;min-height:140px}
+.pay-qr i{font-size:36px;color:#25D366}
+.pay-steps{font-size:12.5px;color:#2e7d32;line-height:1.9;margin-bottom:10px}
+.pay-methods{font-size:11.5px;color:#555;margin-bottom:12px;background:rgba(37,211,102,.08);padding:6px 10px;border-radius:4px;text-align:center}
+.pay-wa-btn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:11px;background:#25D366;color:#fff;border:none;border-radius:4px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.5px;cursor:pointer;text-decoration:none;transition:.2s}
+.pay-wa-btn:hover{background:#128C7E}
+
 /* ── Persian Oriental Rug Pattern ── */
 footer{position:relative}
 nav::after,.hs1::after,.hs2::after,.hs3::after,footer::after{
@@ -427,6 +462,29 @@ nav::after,.hs1::after,.hs2::after,.hs3::after,footer::after{
 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="wa-float" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Mastalina!%20I'm%20browsing%20your%20store%20and%20have%20a%20question." target="_blank">
+  <i class="fab fa-whatsapp"></i> Chat with us
+</a>
+
+<!-- WHATSAPP ORDER CONFIRMATION MODAL -->
+<div class="wa-modal-bg" id="waModal" onclick="if(event.target===this)closeWAModal()">
+  <div class="wa-modal">
+    <button class="wa-modal-close" onclick="closeWAModal()">✕</button>
+    <div class="wa-modal-icon">💬</div>
+    <h3>Your order request is being sent to WhatsApp!</h3>
+    <p>Follow these simple steps to complete your order:</p>
+    <ol>
+      <li><strong>Send the WhatsApp message ✓</strong></li>
+      <li>We confirm availability within <strong>2 hours</strong></li>
+      <li>We share <strong>UPI QR code</strong> for payment</li>
+      <li>Send <strong>payment screenshot</strong></li>
+      <li>Order <strong>confirmed &amp; dispatched!</strong></li>
+    </ol>
+    <button onclick="closeWAModal()" style="width:100%;padding:12px;background:var(--maroon);color:#fff;border:none;border-radius:4px;font-family:'Cinzel',serif;font-size:13px;cursor:pointer;letter-spacing:.5px">Got it!</button>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -792,6 +850,23 @@ nav::after,.hs1::after,.hs2::after,.hs3::after,footer::after{
       </div>
       <button class="pobtn" onclick="placeOrder()"><i class="fas fa-shield-alt"></i> Place Order</button>
       <div class="secnote"><i class="fas fa-lock"></i> 100% Secure Payments</div>
+      <div class="pay-info">
+        <h4><i class="fas fa-qrcode"></i> How to Pay</h4>
+        <div class="pay-qr">
+          <i class="fas fa-qrcode"></i>
+          <span>QR Code Placeholder</span>
+          <span style="font-size:11px;color:#aaa">Your UPI QR will be shared on WhatsApp</span>
+        </div>
+        <div class="pay-steps">
+          📱 Scan &amp; Pay → Send screenshot on WhatsApp → Order confirmed!
+        </div>
+        <div class="pay-methods">
+          <strong>We accept:</strong> GPay &nbsp;|&nbsp; PhonePe &nbsp;|&nbsp; UPI &nbsp;|&nbsp; Bank Transfer
+        </div>
+        <a class="pay-wa-btn" href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'm%20sharing%20my%20payment%20screenshot%20for%20order%20confirmation." target="_blank">
+          <i class="fab fa-whatsapp"></i> Share Payment Screenshot
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -907,7 +982,62 @@ const PRODUCTS = [
   {id:17,name:"Abaya Style Maxi",brand:"Mastalina",cat:"maxi",price:3400,orig:4400,emoji:"🌸",badge:"New",desc:"Elegant modest wear with lace trim",sizes:["S","M","L","XL","XXL"],colors:["#2C3E50","#7D3C98","#C0392B"],cnames:["Navy","Plum","Burgundy"],rating:4.5,rcount:145,bg:"#F5F0FF",
    details:{Fabric:"Crepe","Set Type":"1-Piece","Work Type":"Lace Trim",Occasion:"Modest, Formal",Care:"Hand Wash",Origin:"Bangalore"}},
   {id:18,name:"Festive Anarkali Maxi",brand:"Mastalina",cat:"maxi",price:4200,orig:5600,emoji:"🌟",badge:"Trending",desc:"Indo-western fusion full-length anarkali",sizes:["XS","S","M","L","XL"],colors:["#B03A2E","#D4AC0D","#4A148C"],cnames:["Crimson","Gold","Grape"],rating:4.6,rcount:203,bg:"#FFF8EE",
-   details:{Fabric:"Georgette","Set Type":"2-Piece","Work Type":"Embroidery & Print",Occasion:"Festival, Party",Care:"Dry Clean",Origin:"Surat"}}
+   details:{Fabric:"Georgette","Set Type":"2-Piece","Work Type":"Embroidery & Print",Occasion:"Festival, Party",Care:"Dry Clean",Origin:"Surat"}},
+
+  /* ── AFSANA CATALOG PRODUCTS ── */
+  {id:19,
+   name:"Afsana Mehernaz D.NO.B.4005",
+   brand:"Afsana",
+   cat:"georgette",
+   price:1999,orig:2499,
+   emoji:"🌸",
+   badge:"Ready to Ship",
+   desc:"Organza with beautiful Lakhnvi work, stone work & hand embroidered work. Pure Roman Silk bottom with organza embroidered fancy dupatta.",
+   sizes:["L","XL","XXL","3XL"],
+   colors:["#6B0F6E","#880E4F","#4A0E4E"],
+   cnames:["Wine Purple","Magenta","Dark Plum"],
+   rating:4.8,rcount:42,
+   bg:"#F5E0F5",
+   img:"images/mehernaz-b4005-1.jpg",
+   imgs:["images/mehernaz-b4005-1.jpg","images/mehernaz-b4005-2.jpg","images/mehernaz-b4005-3.jpg","images/mehernaz-b4005-4.jpg","images/mehernaz-b4005-5.jpg"],
+   catalogMeta:{designs:"4 Piece",weight:"5 Kg",fabric:"Organza",size:"L to 3XL"},
+   details:{
+     Top:"Organza with Lakhnvi, Stone & Embroidered Work",
+     Bottom:"Pure Roman Silk",
+     Dupatta:"Organza Embroidered Fancy",
+     "Set Type":"4-Piece (MOQ 1 Set)",
+     "Occasion":"Wedding, Festive, Party",
+     Care:"Dry Clean Only",
+     Origin:"India",
+     "Catalog Rate":"₹3,996 (5% GST Extra)"
+   }},
+
+  {id:20,
+   name:"Afsana Feroza",
+   brand:"Afsana",
+   cat:"georgette",
+   price:2299,orig:2999,
+   emoji:"💠",
+   badge:"New",
+   desc:"Stunning teal organza suit with heavy zari, mirror & stone embroidery work. Intricate craftsmanship with beautiful floral and paisley motifs.",
+   sizes:["S","M","L","XL","XXL"],
+   colors:["#40B0C0","#2A9AAA","#1A7A8A"],
+   cnames:["Teal","Dark Teal","Deep Teal"],
+   rating:4.7,rcount:35,
+   bg:"#E0F7FA",
+   img:"images/feroza-1.jpg",
+   imgs:["images/feroza-1.jpg","images/feroza-2.jpg","images/feroza-3.jpg","images/feroza-4.jpg","images/feroza-5.jpg","images/feroza-6.jpg","images/feroza-7.jpg","images/feroza-8.jpg"],
+   catalogMeta:{designs:"3 Piece",weight:"4 Kg",fabric:"Organza",size:"S to XXL"},
+   details:{
+     Top:"Organza with Zari, Mirror & Stone Embroidery",
+     Bottom:"Silk Satin",
+     Dupatta:"Organza Embroidered",
+     "Set Type":"3-Piece",
+     "Work Type":"Zari, Mirror Work, Stone Work",
+     Occasion:"Party, Wedding, Festive",
+     Care:"Dry Clean Only",
+     Origin:"India"
+   }}
 ];
 
 const REVIEWS = [
@@ -963,12 +1093,22 @@ function stars(r){
   return s;
 }
 function pCardHTML(p,extraClass=''){
-  const disc=calcDisc(p);
+  const disc=p.price<p.orig?calcDisc(p):0;
   const wOn=wishlist.has(p.id)?'on':'';
-  const badgeCls=p.badge?p.badge.toLowerCase():'';
+  const badgeCls=p.badge?p.badge.toLowerCase().replace(/\s+/g,'-'):'';
+  const imgHTML=p.img
+    ?`<img src="${p.img}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">`
+    :'';
+  const emojiHTML=`<span style="z-index:1;position:relative;${p.img?'display:none':''}">${p.emoji}</span>`;
+  const metaHTML=p.catalogMeta?`<div class="pcatalog-meta">
+    <span><b>Designs:</b> ${p.catalogMeta.designs}</span>
+    <span><b>Weight:</b> ${p.catalogMeta.weight}</span>
+    <span><b>Fabric:</b> ${p.catalogMeta.fabric}</span>
+    <span><b>Size:</b> ${p.catalogMeta.size}</span>
+  </div>`:'';
   return `<div class="pcard${extraClass?' '+extraClass:''}" onclick="openProduct(${p.id})" style="position:relative">
     <div class="pimg" style="background:${p.bg}">
-      <span style="z-index:1;position:relative">${p.emoji}</span>
+      ${imgHTML}${emojiHTML}
       ${p.badge?`<div class="pbadge ${badgeCls}">${p.badge}</div>`:''}
       <button class="pwbtn ${wOn}" onclick="event.stopPropagation();toggleWish(${p.id},this)"><i class="fa${wishlist.has(p.id)?'s':'r'} fa-heart"></i></button>
     </div>
@@ -977,14 +1117,15 @@ function pCardHTML(p,extraClass=''){
       <div class="pname">${p.name}</div>
       <div class="pprices">
         <span class="pprice">₹${p.price.toLocaleString('en-IN')}</span>
-        <span class="pmrp">₹${p.orig.toLocaleString('en-IN')}</span>
-        <span class="poff">(${disc}% off)</span>
+        ${disc>0?`<span class="pmrp">₹${p.orig.toLocaleString('en-IN')}</span><span class="poff">(${disc}% off)</span>`:''}
       </div>
       <div class="prat">
         <div class="pratbadge">${p.rating} <i class="fas fa-star" style="font-size:10px"></i></div>
         <div class="pratcount">(${p.rcount})</div>
       </div>
+      ${metaHTML}
     </div>
+    <button class="wa-order-btn" onclick="event.stopPropagation();waOrderCard(${p.id})"><i class="fab fa-whatsapp"></i> Order on WhatsApp</button>
   </div>`;
 }
 
@@ -1097,14 +1238,18 @@ function openProduct(id){
   const catLbl={cotton:'Lawn & Cotton',georgette:'Georgette',silk:'Silk & Satin',bridal:'Bridal',net:'Net Suits',maxi:'Maxi Dresses'};
   document.getElementById('pd-bc-cat').textContent=catLbl[p.cat]||p.cat;
   document.getElementById('pd-bc-name').textContent=p.name;
-  // Gallery (4 panels using emoji with slight bg tint variations)
-  const tints=['','CC','99','66'];
-  document.getElementById('pdThumbs').innerHTML=tints.map((t,i)=>`
-    <div class="pthumb${i===0?' on':''}" onclick="selectThumb(this,${i})" style="background:${p.bg};font-size:28px">
-      ${p.emoji}
+  // Gallery
+  const imgs=p.imgs||[p.img].filter(Boolean);
+  const hasPics=imgs.length>0;
+  document.getElementById('pdThumbs').innerHTML=(hasPics?imgs:[p.img||null,null,null,null]).map((src,i)=>`
+    <div class="pthumb${i===0?' on':''}" onclick="selectThumb(this,${i})" style="background:${hasPics&&src?'#fff':p.bg};font-size:28px;overflow:hidden">
+      ${src?`<img src="${src}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.textContent='${p.emoji}'">`:`<span>${p.emoji}</span>`}
     </div>`).join('');
-  document.getElementById('pdMainImg').style.cssText=`background:${p.bg};font-size:120px;min-height:480px;display:flex;align-items:center;justify-content:center;border-radius:4px`;
-  document.getElementById('pdMainImg').textContent=p.emoji;
+  const mainSrc=hasPics?imgs[0]:null;
+  document.getElementById('pdMainImg').style.cssText=`background:${mainSrc?'#fff':p.bg};font-size:120px;min-height:480px;display:flex;align-items:center;justify-content:center;border-radius:4px;overflow:hidden`;
+  document.getElementById('pdMainImg').innerHTML=mainSrc
+    ?`<img src="${mainSrc}" alt="${p.name}" style="width:100%;height:480px;object-fit:cover;border-radius:4px" onerror="this.outerHTML='<span style=font-size:120px>${p.emoji}</span>'">`
+    :`<span>${p.emoji}</span>`;
   // Info panel
   const disc=calcDisc(p);
   const saving=(p.orig-p.price).toLocaleString('en-IN');
@@ -1144,6 +1289,11 @@ function openProduct(id){
       <button class="btnwish${wishlist.has(p.id)?' on':''}" id="pdWishBtn" onclick="toggleWishDetail(${p.id})">
         <i class="fa${wishlist.has(p.id)?'s':'r'} fa-heart"></i>
       </button>
+    </div>
+    <div class="wa-3btns">
+      <a class="wa-3btn enquire" onclick="return waEnquire(${p.id})" href="#"><i class="fab fa-whatsapp"></i> 💬 Enquire on WhatsApp</a>
+      <a class="wa-3btn order" onclick="return waOrderDetail(${p.id})" href="#"><i class="fab fa-whatsapp"></i> 📦 Place Order on WhatsApp</a>
+      <a class="wa-3btn video" onclick="return waVideo(${p.id})" href="#"><i class="fab fa-whatsapp"></i> 📹 Request Video Call</a>
     </div>
     <div class="delchk">
       <div style="font-size:13px;font-weight:600;color:var(--dark)"><i class="fas fa-truck" style="color:var(--gold);margin-right:6px"></i>Check Delivery</div>
@@ -1208,6 +1358,17 @@ function openProduct(id){
 function selectThumb(el,i){
   document.querySelectorAll('.pthumb').forEach(t=>t.classList.remove('on'));
   el.classList.add('on');
+  const p=PRODUCTS.find(x=>x.id===currentProductId);
+  const imgs=p.imgs||[p.img].filter(Boolean);
+  const src=imgs[i]||null;
+  const mainDiv=document.getElementById('pdMainImg');
+  if(src){
+    mainDiv.style.background='#fff';
+    mainDiv.innerHTML=`<img src="${src}" alt="${p.name}" style="width:100%;height:480px;object-fit:cover;border-radius:4px" onerror="this.outerHTML='<span style=font-size:120px>${p.emoji}</span>'">`;
+  } else {
+    mainDiv.style.background=p.bg;
+    mainDiv.innerHTML=`<span>${p.emoji}</span>`;
+  }
 }
 function selectColor(i,el){
   const p=PRODUCTS.find(x=>x.id===currentProductId);
@@ -1337,10 +1498,13 @@ function applyCoupon(){
 }
 function placeOrder(){
   if(cartItems.length===0)return;
-  const ordId='MAS-2025-'+Math.floor(1000+Math.random()*9000);
-  document.getElementById('orderId').textContent=ordId;
-  cartItems=[];couponApplied=false;
-  updateBadges();showPage('success');
+  showWAModal();
+  setTimeout(()=>{
+    const ordId='MAS-2025-'+Math.floor(1000+Math.random()*9000);
+    document.getElementById('orderId').textContent=ordId;
+    cartItems=[];couponApplied=false;
+    updateBadges();showPage('success');
+  },400);
 }
 
 // ─── WISHLIST ────────────────────────────────────────────────────────────────
@@ -1411,6 +1575,38 @@ function toast(msg,type=''){
   clearTimeout(toastTimer);
   toastTimer=setTimeout(()=>el.classList.remove('show'),2600);
 }
+
+// ─── WHATSAPP ────────────────────────────────────────────────────────────────
+const WA_NUM='91XXXXXXXXXX';
+function waLink(msg){return 'https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(msg)}
+function waOrderCard(id){
+  const p=PRODUCTS.find(x=>x.id===id);
+  const msg='Hi Mastalina! I\'m interested in: '+p.name+'\nPrice: ₹'+p.price.toLocaleString('en-IN')+'\nPlease share availability and payment details.';
+  showWAModal();
+  setTimeout(()=>window.open(waLink(msg),'_blank'),300);
+}
+function waEnquire(id){
+  const p=PRODUCTS.find(x=>x.id===id);
+  const msg='Hi! I want to know more about '+p.name+' - ₹'+p.price.toLocaleString('en-IN')+'. Can you share more details?';
+  window.open(waLink(msg),'_blank');
+  return false;
+}
+function waOrderDetail(id){
+  const p=PRODUCTS.find(x=>x.id===id);
+  const sz=pdSelSize||p.sizes[0];
+  const msg='Hi Mastalina! I want to ORDER: '+p.name+'\nPrice: ₹'+p.price.toLocaleString('en-IN')+'\nMy details:\nName: \nSize: '+sz+'\nAddress: \nPlease confirm availability.';
+  showWAModal();
+  setTimeout(()=>window.open(waLink(msg),'_blank'),300);
+  return false;
+}
+function waVideo(id){
+  const p=PRODUCTS.find(x=>x.id===id);
+  const msg='Hi! I\'d like a video call to see '+p.name+' before ordering. When are you available?';
+  window.open(waLink(msg),'_blank');
+  return false;
+}
+function showWAModal(){document.getElementById('waModal').classList.add('open')}
+function closeWAModal(){document.getElementById('waModal').classList.remove('open')}
 
 // ─── INIT ────────────────────────────────────────────────────────────────────
 renderHome();

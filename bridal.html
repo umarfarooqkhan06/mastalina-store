@@ -222,6 +222,19 @@ footer::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0
 .ft-copy{font-size:12px;color:rgba(245,230,200,.3)}
 .ft-tagline{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:rgba(201,130,10,.3);text-transform:uppercase}
 
+/* ── WHATSAPP SYSTEM ── */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:9000;display:flex;align-items:center;gap:9px;background:#25D366;color:#fff;padding:13px 20px;border-radius:50px;font-family:'Cinzel',serif;font-size:12.5px;letter-spacing:.5px;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;text-decoration:none;transition:.3s;white-space:nowrap}
+.wa-float:hover{background:#128C7E;transform:translateY(-3px);box-shadow:0 8px 28px rgba(37,211,102,.45)}
+.wa-float i{font-size:20px}
+.wa-3btns{display:flex;flex-direction:column;gap:9px;margin:18px 0 0}
+.wa-3btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;border:none;border-radius:2px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:1.5px;cursor:pointer;text-decoration:none;transition:.3s;width:100%;text-transform:uppercase}
+.wa-3btn.enquire{background:#25D366;color:#fff}
+.wa-3btn.order{background:#128C7E;color:#fff}
+.wa-3btn.video{background:transparent;border:1px solid #25D366;color:#25D366}
+.wa-3btn:hover{opacity:.85;transform:translateY(-2px);box-shadow:0 4px 16px rgba(37,211,102,.3)}
+.wa-book-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:16px;background:#25D366;color:#fff;border:none;border-radius:2px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:.3s;margin-top:24px}
+.wa-book-btn:hover{background:#128C7E;box-shadow:0 6px 28px rgba(37,211,102,.3)}
+
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   .nav-inner{padding:0 20px}
@@ -259,6 +272,11 @@ footer::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0
 <body>
 
 <div class="toast" id="toast"></div>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="wa-float" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Mastalina!%20I'm%20browsing%20your%20bridal%20store%20and%20have%20a%20question." target="_blank">
+  <i class="fab fa-whatsapp"></i> Chat with us
+</a>
 
 <!-- ── NAV ── -->
 <nav style="position:sticky;top:0;z-index:1000">
@@ -372,6 +390,11 @@ footer::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0
         <button class="cta-consult" onclick="document.getElementById('consult-sec').scrollIntoView({behavior:'smooth'})"><i class="fas fa-calendar-check"></i> Consult</button>
         <button class="cta-wish" id="w10" onclick="toggleWish('w10')" title="Wishlist"><i class="far fa-heart"></i></button>
       </div>
+      <div class="wa-3btns">
+        <a class="wa-3btn enquire" href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%20want%20to%20know%20more%20about%20Zardozi%20Bridal%20Sharara%20-%20%E2%82%B918%2C500.%20Can%20you%20share%20more%20details%3F" target="_blank"><i class="fab fa-whatsapp"></i> 💬 Enquire on WhatsApp</a>
+        <a class="wa-3btn order" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Mastalina!%20I%20want%20to%20ORDER%3A%20Zardozi%20Bridal%20Sharara%0APrice%3A%20%E2%82%B918%2C500%0AMy%20details%3A%0AName%3A%20%0ASize%3A%20%0AAddress%3A%20%0APlease%20confirm%20availability." target="_blank"><i class="fab fa-whatsapp"></i> 📦 Place Order on WhatsApp</a>
+        <a class="wa-3btn video" href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'd%20like%20a%20video%20call%20to%20see%20Zardozi%20Bridal%20Sharara%20before%20ordering.%20When%20are%20you%20available%3F" target="_blank"><i class="fab fa-whatsapp"></i> 📹 Request Video Call</a>
+      </div>
     </div>
   </div>
 
@@ -430,6 +453,11 @@ footer::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0
         <button class="cta-consult" onclick="document.getElementById('consult-sec').scrollIntoView({behavior:'smooth'})"><i class="fas fa-calendar-check"></i> Consult</button>
         <button class="cta-wish" id="w11" onclick="toggleWish('w11')" title="Wishlist"><i class="far fa-heart"></i></button>
       </div>
+      <div class="wa-3btns">
+        <a class="wa-3btn enquire" href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%20want%20to%20know%20more%20about%20Gold%20Lehenga%20Set%20-%20%E2%82%B922%2C000.%20Can%20you%20share%20more%20details%3F" target="_blank"><i class="fab fa-whatsapp"></i> 💬 Enquire on WhatsApp</a>
+        <a class="wa-3btn order" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Mastalina!%20I%20want%20to%20ORDER%3A%20Gold%20Lehenga%20Set%0APrice%3A%20%E2%82%B922%2C000%0AMy%20details%3A%0AName%3A%20%0ASize%3A%20%0AAddress%3A%20%0APlease%20confirm%20availability." target="_blank"><i class="fab fa-whatsapp"></i> 📦 Place Order on WhatsApp</a>
+        <a class="wa-3btn video" href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'd%20like%20a%20video%20call%20to%20see%20Gold%20Lehenga%20Set%20before%20ordering.%20When%20are%20you%20available%3F" target="_blank"><i class="fab fa-whatsapp"></i> 📹 Request Video Call</a>
+      </div>
     </div>
   </div>
 
@@ -486,6 +514,11 @@ footer::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0
         <button class="cta-bag" onclick="addToBag('Peach Mirror Sharara','₹15,000')"><i class="fas fa-shopping-bag"></i> Add to Bag</button>
         <button class="cta-consult" onclick="document.getElementById('consult-sec').scrollIntoView({behavior:'smooth'})"><i class="fas fa-calendar-check"></i> Consult</button>
         <button class="cta-wish" id="w12" onclick="toggleWish('w12')" title="Wishlist"><i class="far fa-heart"></i></button>
+      </div>
+      <div class="wa-3btns">
+        <a class="wa-3btn enquire" href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%20want%20to%20know%20more%20about%20Peach%20Mirror%20Sharara%20-%20%E2%82%B915%2C000.%20Can%20you%20share%20more%20details%3F" target="_blank"><i class="fab fa-whatsapp"></i> 💬 Enquire on WhatsApp</a>
+        <a class="wa-3btn order" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Mastalina!%20I%20want%20to%20ORDER%3A%20Peach%20Mirror%20Sharara%0APrice%3A%20%E2%82%B915%2C000%0AMy%20details%3A%0AName%3A%20%0ASize%3A%20%0AAddress%3A%20%0APlease%20confirm%20availability." target="_blank"><i class="fab fa-whatsapp"></i> 📦 Place Order on WhatsApp</a>
+        <a class="wa-3btn video" href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'd%20like%20a%20video%20call%20to%20see%20Peach%20Mirror%20Sharara%20before%20ordering.%20When%20are%20you%20available%3F" target="_blank"><i class="fab fa-whatsapp"></i> 📹 Request Video Call</a>
       </div>
     </div>
   </div>
@@ -578,7 +611,7 @@ footer::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0
             <textarea id="f-notes" placeholder="Colour preferences, size notes, customisation requests, any questions…"></textarea>
           </div>
         </div>
-        <button type="submit" class="form-submit"><i class="fas fa-calendar-check"></i> &nbsp;Request Consultation</button>
+        <button type="button" class="wa-book-btn" onclick="submitBridalWA()"><i class="fab fa-whatsapp"></i> &nbsp;Book via WhatsApp</button>
         <p class="form-note">We respect your privacy. Your details are never shared or sold.</p>
       </form>
     </div>
@@ -598,9 +631,9 @@ footer::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0
         <div class="ci-contact-row"><i class="fas fa-envelope"></i> bridal@mastalina.in</div>
         <div class="ci-contact-row"><i class="fas fa-map-marker-alt"></i> Frazer Town, Bangalore</div>
       </div>
-      <button class="ci-whatsapp" onclick="toast('Opening WhatsApp…','ok')">
+      <a class="ci-whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Mastalina!%20I'm%20interested%20in%20a%20bridal%20consultation.%20Please%20share%20details." target="_blank" style="display:flex">
         <i class="fab fa-whatsapp" style="font-size:18px"></i> Chat on WhatsApp
-      </button>
+      </a>
       <div class="ci-hours">
         <strong>Boutique Hours</strong>
         Mon – Sat &nbsp;·&nbsp; 10:00 AM – 8:00 PM<br>
@@ -668,6 +701,17 @@ function submitConsult(e){
   if(!name||!phone){toast('Please fill in all required fields.');return;}
   toast('Thank you, '+name+'! We\'ll call you within 24 hours.');
   e.target.reset();
+}
+
+function submitBridalWA(){
+  const name=document.getElementById('f-name').value.trim();
+  const date=document.getElementById('f-date').value;
+  const budget=document.getElementById('f-budget').value;
+  if(!name){toast('Please enter your name.');return;}
+  const budgetLabel=budget?budget.replace('10k-15k','₹10,000–₹15,000').replace('15k-22k','₹15,000–₹22,000').replace('22k-35k','₹22,000–₹35,000').replace('35k+','₹35,000 & above'):'Not specified';
+  const msg='Hi! I want to book a bridal consultation.\nName: '+name+'\nWedding Date: '+(date||'To be decided')+'\nBudget: '+budgetLabel+'\nI found you on your website.';
+  window.open('https://wa.me/91XXXXXXXXXX?text='+encodeURIComponent(msg),'_blank');
+  toast('Opening WhatsApp…','ok');
 }
 </script>
 </body>
